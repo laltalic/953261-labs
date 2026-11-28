@@ -111,3 +111,10 @@ export function namesByCategory(menu) {
     [item.category]: [...(acc[item.category] || []), item.name],
   }), {});
 }
+
+//My Function
+export function itemsWithTag(menu, tag) {
+  return menu
+   .filter((item) => item.tags.includes(tag))
+   .map((item) => item.name);
+}
